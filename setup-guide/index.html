@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Printer Setup</title>
+
+</head>
+
+<body>
+
+<div style="background:linear-gradient(90deg,#1a73e8,#0a58ca);padding:12px 16px;font-family:sans-serif">
+
+  <div style="max-width:1100px;margin:auto;text-align:center;position:relative">
+
+    <!-- HAMBURGER -->
+    <div onclick="toggleMenu()" 
+    style="color:#fff;font-size:22px;cursor:pointer;display:none;position:absolute;right:10px;top:0" id="btn">
+      ☰
+    </div>
+
+    <!-- NAV -->
+    <div id="nav" style="display:flex;gap:30px;justify-content:center">
+      <a href="#" style="color:#fff;text-decoration:none">Home</a>
+      <a href="#" style="color:#fff;text-decoration:none">Drivers</a>
+      <a href="#" style="color:#fff;text-decoration:none">Device</a>
+      <a href="#" style="color:#fff;text-decoration:none">Manufactures</a>
+      <a href="#" style="color:#fff;text-decoration:none">Download</a>
+    </div>
+
+  </div>
+</div>
+
+<style>
+@media(max-width:768px){
+
+#btn{display:block}
+
+/* IMPORTANT: force hide */
+#nav{
+display:none !important;
+flex-direction:column;
+gap:15px;
+margin-top:15px;
+background:#065fe5;
+padding:15px 0;
+}
+body{
+  overflow-x:hidden;
+}
+
+/* show only on click */
+#nav.show{
+display:flex !important;
+}
+}
+</style>
+
+<script>
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("show");
+}
+</script>
+
+
+
+<div style="max-width:1200px; margin:10px auto; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:15px;">
+
+
+    <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#777;">
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; border:2px solid #2764ff; color:#2764ff; font-weight:bold; margin-right:4px;">1</span>
+      <span>Identify</span>
+      <span style="margin:0 6px; color:#999;">&gt;</span>
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; border:2px solid #2764ff; color:#2764ff; font-weight:bold; margin-right:4px;">2</span>
+      <span>Download</span>
+      <span style="margin:0 6px; color:#999;">&gt;</span>
+      <span style="display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; border:2px solid #ccc; color:#999; font-weight:bold; margin-right:4px;">3</span>
+      <span>Install</span>
+    </div>
+
+
+    <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:#333;">
+      <span>Select a different product type:</span>
+      <div style="display:flex; gap:8px;">
+        <button type="button" style="border:none; outline:none; width:32px; height:32px; border-radius:50%; background:#2764ff; color:#fff; font-weight:bold; cursor:pointer;">P</button>
+        <button type="button" style="border:1px solid #ddd; width:32px; height:32px; border-radius:50%; background:#fff; cursor:pointer;">S</button>
+        <button type="button" style="border:1px solid #ddd; width:32px; height:32px; border-radius:50%; background:#fff; cursor:pointer;">F</button>
+        <button type="button" style="border:1px solid #ddd; width:32px; height:32px; border-radius:50%; background:#fff; cursor:pointer;">O</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- HERO SECTION START -->
+<section style="
+  width:100%;
+  background:linear-gradient(180deg,#ffffff,#f4f8ff);
+  padding:70px 20px;
+  font-family:Arial, sans-serif;
+">
+
+<div style="
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+">
+
+  <!-- LEFT CONTENT -->
+  <div style="flex:1;min-width:300px">
+
+    <h1 style="
+      font-size:42px;
+      font-weight:800;
+      color:#1a5ad9;
+      margin-bottom:20px;
+      line-height:1.2;
+    ">
+      Printer Setup & Troubleshooting Guides
+    </h1>
+
+    <p style="color:#444;margin-bottom:10px;line-height:1.6">
+      Start by powering on your printer and keeping it nearby.
+    </p>
+
+    <p style="color:#555;margin-bottom:25px;line-height:1.7">
+      Access step-by-step printer setup instructions, driver installation guidance, and troubleshooting articles designed to help users resolve common printing issues.
+    </p>
+
+    <a href="/book-diagnose.html" style="
+      display:inline-block;
+      background:linear-gradient(90deg,#1a73e8,#e91e63);
+      color:#fff;padding:14px 30px;border:none;
+      padding:14px 30px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 10px 25px rgba(26,90,217,0.3);
+      transition:0.3s;
+    "
+    onmouseover="this.style.transform='translateY(-3px)'"
+    onmouseout="this.style.transform='translateY(0)'">
+      View Setup Guide →
+    </a>
+
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="divider"></div>
+  <style>.divider{
+  width:1px;
+  height:260px;
+  background:#dbe5ff;
+}
+
+@media(max-width:768px){
+  .divider{
+    display:none;
+  }
+}</style>
+
+  <!-- RIGHT SLIDER -->
+  <div style="
+    flex:1;
+    min-width:300px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+  ">
+
+    <!-- SLIDER CONTAINER -->
+    <div style="
+      width:100%;
+      max-width:420px;
+      height:300px;
+      position:relative;
+      overflow:hidden;
+    ">
+
+      <img id="heroSlider" src="/image/printer3.avif" style="
+        width:100%;
+        height:100%;
+        object-fit:contain;
+        position:absolute;
+        top:0;
+        left:0;
+        transition:opacity 0.4s ease;
+      ">
+
+    </div>
+
+    <!-- LEFT ARROW -->
+    <button onclick="prevSlide()" style="
+      position:absolute;
+      left:10px;
+      top:50%;
+      transform:translateY(-50%);
+      background:#fff;
+      border:none;
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      cursor:pointer;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      font-size:20px;
+    ">‹</button>
+
+    <!-- RIGHT ARROW -->
+    <button onclick="nextSlide()" style="
+      position:absolute;
+      right:10px;
+      top:50%;
+      transform:translateY(-50%);
+      background:#fff;
+      border:none;
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      cursor:pointer;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      font-size:20px;
+    ">›</button>
+
+  </div>
+
+</div>
+</section>
+
+<!-- SLIDER SCRIPT -->
+<script>
+const heroImages = [
+  "/image/printer1.png",
+  "/image/printer2.png",
+  "/image/printer3.avif"
+];
+
+let current = 0;
+const heroSlider = document.getElementById("heroSlider");
+
+function showSlide(i){
+  heroSlider.style.opacity = "0";
+  setTimeout(()=>{
+    heroSlider.src = heroImages[i];
+    heroSlider.style.opacity = "1";
+  },200);
+}
+
+function nextSlide(){
+  current = (current + 1) % heroImages.length;
+  showSlide(current);
+}
+
+function prevSlide(){
+  current = (current - 1 + heroImages.length) % heroImages.length;
+  showSlide(current);
+}
+
+/* AUTO SLIDE */
+setInterval(nextSlide, 3500);
+</script>
+
+<!-- RESPONSIVE -->
+<style>
+@media(max-width:768px){
+
+section{
+padding:40px 16px !important;
+}
+
+h1{
+font-size:30px !important;
+text-align:center;
+}
+
+
+
+/* divider hide */
+section div div[style*="width:1px"]{
+display:none !important;
+}
+
+/* arrows hide mobile */
+button{
+display:none !important;
+}
+
+}
+</style>
+<!-- HERO SECTION END -->
+
+
+
+
+<!-- ISSUE CARDS (ONE LINE FIXED) -->
+<section style="
+  width:100%;
+  padding:40px 20px;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+">
+
+  <div class="issue-grid">
+
+    <div class="issue-card" onclick="if(window.jivo_api){jivo_api.open();}">
+      <svg viewBox="0 0 64 64">
+        <rect x="12" y="18" width="40" height="28" rx="4"></rect>
+        <circle cx="44" cy="40" r="5"></circle>
+        <polyline points="42,40 44,42 48,36"></polyline>
+      </svg>
+      <p>Printer Setup<br>Issues</p>
+    </div>
+
+    <div class="issue-card" onclick="if(window.jivo_api){jivo_api.open();}">
+      <svg viewBox="0 0 64 64">
+        <rect x="12" y="18" width="40" height="28" rx="4"></rect>
+        <circle cx="44" cy="40" r="5"></circle>
+        <line x1="44" y1="36" x2="44" y2="44"></line>
+      </svg>
+      <p>Printer Offline<br>Issues</p>
+    </div>
+
+    <div class="issue-card" onclick="if(window.jivo_api){jivo_api.open();}">
+      <svg viewBox="0 0 64 64">
+        <circle cx="32" cy="34" r="3"></circle>
+        <path d="M22 28a14 14 0 0 1 20 0"></path>
+        <path d="M16 22a22 22 0 0 1 32 0"></path>
+      </svg>
+      <p>WiFi Connection<br>Errors</p>
+    </div>
+
+    <div class="issue-card" onclick="if(window.jivo_api){jivo_api.open();}">
+      <svg viewBox="0 0 64 64">
+        <rect x="18" y="12" width="28" height="40" rx="4"></rect>
+        <line x1="24" y1="24" x2="40" y2="24"></line>
+        <circle cx="40" cy="42" r="5"></circle>
+        <line x1="36" y1="38" x2="44" y2="46"></line>
+      </svg>
+      <p>Paper Jam<br>Errors</p>
+    </div>
+
+    <div class="issue-card" onclick="if(window.jivo_api){jivo_api.open();}">
+      <svg viewBox="0 0 64 64">
+        <rect x="14" y="20" width="36" height="24" rx="4"></rect>
+        <line x1="20" y1="28" x2="44" y2="28"></line>
+        <line x1="20" y1="34" x2="44" y2="34"></line>
+        <circle cx="44" cy="42" r="5"></circle>
+      </svg>
+      <p>Print Jobs Stuck<br>in Queue</p>
+    </div>
+
+    <div class="issue-card" onclick="if(window.jivo_api){jivo_api.open();}">
+      <svg viewBox="0 0 64 64">
+        <rect x="18" y="12" width="28" height="40" rx="4"></rect>
+        <rect x="22" y="18" width="20" height="14"></rect>
+        <line x1="22" y1="42" x2="42" y2="42"></line>
+      </svg>
+      <p>Scanner<br>Malfunctions</p>
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+.issue-grid{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(6, 1fr);
+  gap:26px;
+}
+
+.issue-card{
+  background:#ffffff;
+  border-radius:22px;
+  padding:30px 18px;
+  text-align:center;
+  box-shadow:0 18px 45px rgba(0,0,0,0.18);
+  transition:.25s ease;
+}
+
+.issue-card:hover{
+  transform:translateY(-6px);
+}
+
+.issue-card svg{
+  width:46px;
+  height:46px;
+  margin-bottom:16px;
+  stroke:#0b4ddb;
+  stroke-width:2.2;
+  fill:none;
+}
+
+.issue-card p{
+  margin:0;
+  font-size:16px;
+  font-weight:700;
+  color:#0b4ddb;
+  line-height:1.35;
+}
+
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .issue-grid{ grid-template-columns:repeat(3,1fr); }
+}
+
+@media(max-width:640px){
+  .issue-grid{ grid-template-columns:repeat(2,1fr); }
+}
+
+@media(max-width:420px){
+  .issue-grid{ grid-template-columns:1fr; }
+}
+</style>
+
+
+<div style="background:linear-gradient(180deg,#f4f8ff,#eaf2ff);padding:60px 15px;font-family:sans-serif">
+
+  <div style="max-width:1100px;margin:auto;display:flex;align-items:center;gap:50px;flex-wrap:wrap">
+
+    <!-- IMAGE CARD -->
+    <div style="flex:1;min-width:280px">
+      <div style="background:#fff;padding:20px;border-radius:18px;
+      box-shadow:0 20px 40px rgba(0,0,0,0.08);transition:0.3s">
+
+        <img src="/image/Printer Image All.png" 
+        style="width:100%;border-radius:12px">
+
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div style="flex:1;min-width:280px">
+
+      <h2 style="color:#0a58ca;font-size:34px;margin-bottom:20px;font-weight:700">
+        Easy Printer Setup Guide
+      </h2>
+
+      <div style="color:#444;font-size:15px;line-height:1.8;margin-bottom:25px">
+
+        <div style="margin-bottom:10px">✔ Turn on your printer and connect power cable</div>
+        <div style="margin-bottom:10px">✔ Install required drivers from official source</div>
+        <div style="margin-bottom:10px">✔ Connect printer via USB or WiFi network</div>
+        <div style="margin-bottom:10px">✔ Run setup wizard and complete installation</div>
+        <div style="margin-bottom:10px">✔ Print a test page to verify setup</div>
+
+      </div>
+
+      <!-- BUTTON -->
+      <a href="#" 
+      style="display:inline-block;background:linear-gradient(90deg,#1a73e8,#e91e63);
+      color:#fff;padding:14px 30px;border:none;
+      text-decoration:none;font-weight:500;
+      box-shadow:0 8px 20px rgba(26,115,232,0.3);
+      transition:0.3s"
+      onmouseover="this.style.transform='translateY(-2px)'"
+      onmouseout="this.style.transform='translateY(0)'">
+        Start Printer Setup →
+      </a>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div style="background:linear-gradient(180deg,#f4f8ff,#eaf2ff);padding:60px 15px;font-family:sans-serif">
+
+  <div style="max-width:1100px;margin:auto;display:flex;align-items:center;gap:50px;flex-wrap:wrap">
+
+    <!-- LEFT CONTENT -->
+    <div style="flex:1;min-width:280px">
+
+      <h2 style="font-size:36px;margin-bottom:15px;font-weight:700;color:#111">
+        Printer Laser Pro <span style="color:#1a73e8">900LX</span>
+      </h2>
+
+      <p style="color:#555;line-height:1.6;margin-bottom:15px">
+        A powerful enterprise-level printer built for speed, reliability, and high-performance workflows.
+      </p>
+
+      <div style="color:#444;line-height:1.8;margin-bottom:25px;font-size:15px">
+        ✔ Ultra-fast printing for large-volume jobs <br>
+        ✔ Enterprise-grade security & management <br>
+        ✔ High-capacity trays for smooth workflow <br>
+        ✔ Energy-efficient with low operating cost
+      </div>
+
+      <!-- BUY NOW BUTTON (JIVO CHAT) -->
+      <button onclick="openJivo()" 
+      style="background:linear-gradient(90deg,#1a73e8,#e91e63);
+      color:#fff;padding:14px 30px;border:none;
+      border-radius:30px;font-size:16px;
+      cursor:pointer;font-weight:500;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+      transition:0.3s"
+      onmouseover="this.style.transform='translateY(-2px)'"
+      onmouseout="this.style.transform='translateY(0)'">
+        🛒 Buy Now
+      </button>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div style="flex:1;min-width:280px;text-align:center">
+      <img src="/image/PrintzWise.png" 
+      style="width:100%;max-width:380px;border-radius:12px">
+    </div>
+
+  </div>
+</div>
+
+<script>
+function openJivo(){
+  if(window.jivo_api){
+    jivo_api.open();
+  } else {
+    alert("Chat is loading, please try again.");
+  }
+}
+</script>
+
+
+
+<section style="
+  background:linear-gradient(135deg,#0f2027,#2c5364,#1c92d2);
+  padding:80px 20px;
+  font-family:sans-serif;
+">
+
+<div style="max-width:1200px;margin:auto;text-align:center;color:#fff">
+
+  <h2 style="font-size:34px;margin-bottom:10px;font-weight:700">
+    Our Services
+  </h2>
+
+  <p style="max-width:700px;margin:0 auto 50px;color:#dbeafe;line-height:1.7">
+    Complete printer solutions including setup, troubleshooting, driver installation, and expert support.
+  </p>
+
+  <div class="grid">
+
+    <!-- CARD -->
+    <div class="card">
+      <div class="icon" style="background:#4f46e5">🖨️</div>
+      <h3>Inkjet Printers</h3>
+      <p>High-quality color printing for daily needs.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon" style="background:#06b6d4">⚡</div>
+      <h3>Laser Printers</h3>
+      <p>Fast and efficient bulk document printing.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon" style="background:#10b981">📄</div>
+      <h3>All-in-One</h3>
+      <p>Print, scan, and copy in one device.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon" style="background:#f59e0b">🧾</div>
+      <h3>Thermal</h3>
+      <p>Best for receipts and barcode printing.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon" style="background:#ec4899">📸</div>
+      <h3>Photo</h3>
+      <p>Vibrant high-quality photo printing.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon" style="background:#22c55e">🏷️</div>
+      <h3>Label</h3>
+      <p>Efficient labeling for business use.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon" style="background:#6366f1">📑</div>
+      <h3>Dot Matrix</h3>
+      <p>Reliable invoice and bulk printing.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon" style="background:#ef4444">🧠</div>
+      <h3>3D Printing</h3>
+      <p>Advanced modern printing solutions.</p>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+<style>
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.08);
+padding:30px 20px;
+border-radius:18px;
+backdrop-filter:blur(12px);
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+transition:0.3s;
+text-align:center;
+border:1px solid rgba(255,255,255,0.1);
+}
+
+/* HOVER */
+.card:hover{
+transform:translateY(-10px) scale(1.02);
+background:rgba(255,255,255,0.15);
+box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* ICON */
+.icon{
+width:55px;
+height:55px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+margin:0 auto 15px;
+color:#fff;
+}
+
+/* TEXT */
+.card h3{
+margin-bottom:10px;
+font-size:18px;
+color:#fff;
+}
+*{
+  box-sizing:border-box;
+}
+
+.card p{
+font-size:14px;
+color:#e2e8f0;
+line-height:1.6;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.card{padding:25px 15px}
+}
+</style>
+
+
+<section style="
+  background:#f5f7fb;
+  padding:80px 15px;
+  font-family:sans-serif;
+">
+
+<div style="
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:50px;
+  flex-wrap:wrap;
+">
+
+  <!-- LEFT IMAGE -->
+  <div style="
+    flex:1;
+    min-width:280px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  ">
+
+    <!-- NO BACKGROUND BOX -->
+    <img src="/image/printer-model.png" style="
+      width:100%;
+      max-width:380px;
+      height:auto;
+max-height:320px;
+      object-fit:contain;
+      display:block;
+    ">
+
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div style="flex:1;min-width:280px">
+
+    <!-- BADGE -->
+    <div style="
+      display:inline-block;
+      padding:6px 14px;
+      border-radius:20px;
+      background:#e6efff;
+      color:#1a5ad9;
+      font-size:13px;
+      font-weight:600;
+      margin-bottom:12px;
+    ">
+      Featured Printer
+    </div>
+
+    <!-- TITLE -->
+    <h2 style="
+      font-size:36px;
+      font-weight:800;
+      margin-bottom:12px;
+      color:#111;
+    ">
+      SmartOffice Pro X900
+    </h2>
+
+    <!-- DESC -->
+    <p style="
+      color:#555;
+      line-height:1.6;
+      margin-bottom:20px;
+    ">
+      A powerful all-in-one printer designed for high performance, smooth workflow, and modern office productivity.
+    </p>
+
+    <!-- FEATURES -->
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin-bottom:25px;
+    ">
+
+      <div class="feat">⚡ Fast Printing</div>
+      <div class="feat">📡 Wireless Ready</div>
+      <div class="feat">🔁 Duplex Mode</div>
+      <div class="feat">🌱 Energy Saving</div>
+
+    </div>
+
+    <!-- STATS -->
+    <div style="
+      display:flex;
+      gap:30px;
+      margin-bottom:25px;
+      font-size:14px;
+      color:#444;
+    ">
+      <div><strong>30+</strong><br>PPM Speed</div>
+      <div><strong>99%</strong><br>Reliability</div>
+      <div><strong>24/7</strong><br>Support</div>
+    </div>
+
+    <!-- BUTTON (UNCHANGED) -->
+    <button style="
+      background:linear-gradient(90deg,#1a73e8,#e91e63);
+      color:#fff;
+      padding:14px 32px;
+      border:none;
+      border-radius:30px;
+      font-size:15px;
+      cursor:pointer;
+      font-weight:600;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    ">
+      Buy Now →
+    </button>
+
+  </div>
+
+</div>
+</section>
+
+<style>
+.feat{
+background:#fff;
+padding:10px 12px;
+border-radius:8px;
+font-size:14px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+section div{
+text-align:center;
+}
+
+h2{
+font-size:28px !important;
+}
+
+.feat{
+text-align:center;
+}
+
+}
+</style>
+
+<footer style="background:#0b1220;color:#fff;padding:50px 20px 20px;font-family:Poppins,Arial,sans-serif;">
+  
+  <div style="max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;">
+    
+    <!-- Left -->
+    <div style="flex:1 1 260px;min-width:250px;">
+      <h2 style="color:#00c3ff;margin-bottom:15px;">Printer Care Pro</h2>
+      
+      <p style="color:#cbd5e1;line-height:1.6;margin-bottom:20px;">
+        In today’s competitive world, printed materials play a major role in building brand identity 
+        and creating a strong impression. We ensure that every print product reflects excellence, 
+        creativity, and reliability.
+      </p>
+
+      <p style="color:#00c3ff;margin-bottom:10px;">
+        📍 20503 Khole Springs Lane<br>
+        Cypress, TX 77433<br>
+        United States
+      </p>
+
+      <p style="color:#cbd5e1;">
+        ✉ info@printercarepro.shop | 📞  +1-877-496-7174
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1 1 150px;min-width:150px;">
+      <h3 style="color:#00c3ff;margin-bottom:15px;">Quick Links</h3>
+      <p style="margin:8px 0;color:#cbd5e1;">Home</p>
+      <p style="margin:8px 0;color:#cbd5e1;">About</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Services</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Products</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Contact</p>
+      <p style="margin:8px 0;color:#cbd5e1;">FAQs</p>
+    </div>
+
+    <!-- Products -->
+    <div style="flex:1 1 180px;min-width:180px;">
+      <h3 style="color:#00c3ff;margin-bottom:15px;">Printer Care Pro</h3>
+      <p style="margin:8px 0;color:#cbd5e1;">Inkjet Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Laser Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">All-in-One Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Thermal Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Dot Matrix Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Photo Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Label Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">3D Printers</p>
+    </div>
+
+    <!-- Policy -->
+    <div style="flex:1 1 150px;min-width:150px;">
+      <h3 style="color:#00c3ff;margin-bottom:15px;">Our Policy</h3>
+      <p style="margin:8px 0;"><a href="/privacy-policies.html" style="color:#00c3ff;text-decoration:none;">Privacy Policy</a></p>
+      <p style="margin:8px 0;"><a href="/terms-and-conditions.html" style="color:#00c3ff;text-decoration:none;">Terms & Conditions</a></p>
+      <p style="margin:8px 0;"><a href="/refund-policies.html" style="color:#00c3ff;text-decoration:none;">Refund Policy</a></p>
+      <p style="margin:8px 0;"><a href="/disclaimer.html" style="color:#00c3ff;text-decoration:none;">Disclaimer</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div style="text-align:center;margin-top:40px;padding-top:15px;border-top:1px solid #1e293b;color:#94a3b8;">
+    © 2026 Printer Care Pro. All Rights Reserved.
+  </div>
+
+</footer>
+</body>
+</html>
