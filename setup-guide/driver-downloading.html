@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Printer Setup</title>
+
+</head>
+
+<body>
+
+
+<section style="background:linear-gradient(135deg,#3b82c4,#2563eb);padding:80px 20px;font-family:Inter,Arial;color:#fff;min-height:420px;">
+
+  <div style="max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:50px;">
+
+    <!-- LEFT -->
+    <div style="flex:1;min-width:300px;">
+
+      <h1 style="font-size:48px;margin-bottom:10px;font-weight:600;">
+        Downloading Printer Driver
+      </h1>
+
+      <!-- TRUST -->
+      <p style="color:#dbeafe;margin-bottom:10px;font-size:14px;">
+        ✔ Verified Secure Download &nbsp; • &nbsp; ✔ Microsoft Compatible &nbsp; • &nbsp; ✔ No Malware
+      </p>
+
+      <p id="statusText" style="margin-bottom:25px;color:#e0f2fe;">
+        Connecting to secure server...
+      </p>
+
+      <!-- DOWNLOAD BAR -->
+      <div style="background:#cbd5e1;border-radius:50px;height:14px;overflow:hidden;margin-bottom:10px;">
+        <div id="progress1" style="
+          width:0%;
+          height:100%;
+          background:linear-gradient(90deg,#22c55e,#16a34a);
+          border-radius:50px;
+          transition:width 0.4s ease;
+        "></div>
+      </div>
+
+      <p id="progressText1" style="margin-bottom:25px;">
+        Downloading... 0%
+      </p>
+
+      <!-- INSTALL SECTION (NO JUMP) -->
+      <div id="installSection" style="margin-top:10px;height:90px;">
+
+        <!-- INSTALL BAR -->
+        <div style="background:#cbd5e1;border-radius:50px;height:14px;overflow:hidden;margin-bottom:10px;">
+          <div id="progress2" style="
+            width:0%;
+            height:100%;
+            background:linear-gradient(90deg,#22c55e,#16a34a);
+            border-radius:50px;
+            position:relative;
+            transition:width 0.4s ease;
+          ">
+            <!-- STRIPES -->
+            <div id="stripe" style="
+              position:absolute;
+              width:200%;
+              height:100%;
+              background:repeating-linear-gradient(
+                45deg,
+                rgba(255,255,255,0.25) 0,
+                rgba(255,255,255,0.25) 10px,
+                transparent 10px,
+                transparent 20px
+              );
+              animation:move 1s linear infinite;
+              opacity:0;
+            "></div>
+          </div>
+        </div>
+
+        <p id="progressText2" style="visibility:hidden;">
+          Installing... 0%
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div style="flex:1;text-align:center;">
+      <img src="/setup-guide/image/card1.jpg"
+        style="max-width:420px;width:100%;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,0.25);">
+    </div>
+
+  </div>
+
+</section>
+
+<style>
+    *{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  overflow-x:hidden;
+}
+@keyframes move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
+<script>
+
+let progress = 0;
+let installProgress = 0;
+
+// STATUS MESSAGES
+const messages = [
+  "Connecting to secure server...",
+  "Fetching driver package...",
+  "Verifying file integrity...",
+  "Scanning for threats...",
+  "Preparing installation files..."
+];
+
+let msgIndex = 0;
+
+let msgInterval = setInterval(()=>{
+  if(progress < 100){
+    document.getElementById("statusText").innerText = messages[msgIndex % messages.length];
+    msgIndex++;
+  }
+},2000);
+
+
+// DOWNLOAD
+let downloadInterval = setInterval(() => {
+
+  progress += Math.random() * 5 + 3;
+
+  if(progress >= 100){
+    progress = 100;
+
+    document.getElementById("progress1").style.width = "100%";
+    document.getElementById("progressText1").innerText = "✔ Download Complete";
+    document.getElementById("statusText").innerText = "Verifying downloaded files...";
+
+    clearInterval(downloadInterval);
+    clearInterval(msgInterval);
+
+    setTimeout(()=>{
+      startInstall();
+    },800);
+
+  } else {
+    document.getElementById("progress1").style.width = progress + "%";
+    document.getElementById("progressText1").innerText = "Downloading... " + Math.floor(progress) + "%";
+  }
+
+},350);
+
+
+// INSTALL
+function startInstall(){
+
+  document.getElementById("progressText2").style.visibility = "visible";
+  document.getElementById("stripe").style.opacity = "1";
+
+  document.getElementById("statusText").innerText = "Installing printer driver components...";
+
+  let installInterval = setInterval(() => {
+
+    installProgress += Math.random() * 3 + 1;
+
+    if(installProgress >= 75){
+      installProgress = 75;
+
+      document.getElementById("progress2").style.width = installProgress + "%";
+      document.getElementById("progressText2").innerText = "Installing... " + Math.floor(installProgress) + "%";
+
+      // ERROR STATE
+      document.getElementById("statusText").innerText = "Printer spooler service not responding...";
+      document.getElementById("progress2").style.background = "#ef4444";
+      document.getElementById("stripe").style.animation = "none";
+
+      clearInterval(installInterval);
+
+      setTimeout(()=>{
+        window.location.href = "error.html";
+      },2500);
+
+    } else {
+      document.getElementById("progress2").style.width = installProgress + "%";
+      document.getElementById("progressText2").innerText = "Installing... " + Math.floor(installProgress) + "%";
+    }
+
+  },400);
+}
+
+</script>
+
+<section style="
+  width:100%;
+  background:#f5f7fb;
+  border-top:4px solid #1a73e8;
+  padding:18px 12px;
+  font-family:sans-serif;
+">
+
+  <div style="
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+  ">
+
+    <p style="
+      font-size:15px;
+      color:#333;
+      margin-bottom:10px;
+      line-height:1.6;
+      word-wrap:break-word;
+    ">
+      Install Smart software and drivers on each mobile device or computer you want to print from. Add the printer on the new device.
+    </p>
+
+    <p style="
+      font-size:15px;
+      color:#444;
+      margin:0;
+      line-height:1.6;
+    ">
+      Need additional help with setup? 
+      <span onclick="openJivo()" style="
+        color:#1a73e8;
+        font-weight:600;
+        cursor:pointer;
+      ">
+        Printer Support
+      </span>
+    </p>
+
+  </div>
+
+</section>
+
+<script>
+function openJivo(){
+  if(window.jivo_api){
+    jivo_api.open();
+  } else {
+    alert("Chat is loading, please wait...");
+  }
+}
+</script>
+
+<style>
+/* MOBILE FIX */
+@media(max-width:768px){
+
+section{
+padding:15px 10px !important;
+}
+
+p{
+font-size:14px !important;
+}
+
+}
+</style>
+
+
+</body>
+</html>

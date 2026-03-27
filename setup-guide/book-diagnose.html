@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Printer Setup</title>
+
+</head>
+
+<body>
+
+<div style="background:linear-gradient(90deg,#1a73e8,#0a58ca);padding:12px 16px;font-family:sans-serif">
+
+  <div style="max-width:1100px;margin:auto;text-align:center;position:relative">
+
+    <!-- HAMBURGER -->
+    <div onclick="toggleMenu()" 
+    style="color:#fff;font-size:22px;cursor:pointer;display:none;position:absolute;right:10px;top:0" id="btn">
+      ☰
+    </div>
+
+    <!-- NAV -->
+    <div id="nav" style="display:flex;gap:30px;justify-content:center">
+      <a href="#" style="color:#fff;text-decoration:none">Home</a>
+      <a href="#" style="color:#fff;text-decoration:none">Drivers</a>
+      <a href="#" style="color:#fff;text-decoration:none">Device</a>
+      <a href="#" style="color:#fff;text-decoration:none">Manufactures</a>
+      <a href="#" style="color:#fff;text-decoration:none">Download</a>
+    </div>
+
+  </div>
+</div>
+
+<style>
+@media(max-width:768px){
+
+#btn{display:block}
+
+/* IMPORTANT: force hide */
+#nav{
+display:none !important;
+flex-direction:column;
+gap:15px;
+margin-top:15px;
+background:#065fe5;
+padding:15px 0;
+}
+body{
+  overflow-x:hidden;
+}
+
+/* show only on click */
+#nav.show{
+display:flex !important;
+}
+}
+</style>
+
+<script>
+function toggleMenu(){
+  document.getElementById("nav").classList.toggle("show");
+}
+</script>
+
+
+
+<section style="position:relative; font-family:Poppins,Arial;">
+
+  <!-- Background Image -->
+  <div style="
+    background:url('/setup-guide/image/bnr1.png');
+    background-size:cover;
+    background-position:center;
+    position:absolute;
+    top:0; left:0; right:0; bottom:0;
+    z-index:1;
+  "></div>
+
+  <!-- Content -->
+  <div style="
+    position:relative;
+    z-index:3;
+    max-width:1200px;
+    margin:auto;
+    padding:80px 20px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    color:#fff;
+  ">
+
+    <!-- Left -->
+    <div style="flex:1 1 500px;">
+      <h1 style="font-size:48px;margin-bottom:20px;">
+        Resolved Printer Setup Problem
+      </h1>
+
+      <p style="font-size:18px;color:#dbeafe;margin-bottom:25px;">
+        Still stuck on setup? Our expert walkthroughs are created for your exact printer, so you're never left guessing.
+      </p>
+
+      <h3 style="margin-bottom:15px;">Type your printer model below:</h3>
+
+      <!-- Input -->
+      <form onsubmit="redirectPage(event)" style="display:flex;max-width:500px;">
+        <input 
+          type="text" 
+          required
+          placeholder='Enter model number (Ex: "ENVY 4520")'
+          style="flex:1;padding:15px;border:none;border-radius:5px 0 0 5px;font-size:16px;outline:none;"
+        >
+        <button 
+          type="submit"
+          style="padding:15px 25px;background:#3b82f6;border:none;color:#fff;font-size:16px;border-radius:0 5px 5px 0;cursor:pointer;"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+
+    <!-- Right Image -->
+    <div style="flex:1 1 300px;text-align:center;">
+      <img 
+        src="/setup-guide/image/printer3.png"
+        style="max-width:300px;width:100%;"
+      >
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+function redirectPage(e){
+  e.preventDefault();
+  window.location.href = "driver-downloading.html";
+}
+</script>
+
+
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+.font-same{
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+</style>
+
+<div class="font-same" style="max-width:1200px; margin:20px auto; padding:0 16px;">
+
+  <!-- INTRO -->
+ <p style="font-size:16.5px; color:#e11d2e; line-height:1.75; margin-bottom:30px; font-weight:600;">
+  <span style="font-size:22px; margin-right:6px;">•</span>
+  Printer setup doesn’t need to be difficult. Use this step-by-step guide to install, connect, and configure your printer correctly. Each step includes clear visual instructions and helpful tips to ensure a smooth and successful setup.
+</p>
+
+
+<!-- STEP 1 -->
+<div style="background:#ffffff; border-radius:16px; padding:30px 34px; margin-bottom:30px; box-shadow:0 10px 26px rgba(0,0,0,0.12); border-left:6px solid #2563eb;">
+  <h3 style="margin:0 0 18px 0; font-size:20px; color:#2563eb; font-weight:600;">
+    Step 1: Unpack and Prepare Your Printer
+  </h3>
+  <ul style="margin:0 0 18px 0; padding-left:22px; line-height:1.85; font-size:15.5px; color:#222;">
+    <li>Carefully remove the printer from the box along with all included accessories such as power cables, ink or toner cartridges, manuals, and setup guides.</li>
+    <li>Check the box contents to ensure nothing is missing or damaged before proceeding with the installation.</li>
+    <li>Remove all protective tapes, plastic covers, cardboard inserts, and packaging materials from both the outside and inside of the printer.</li>
+    <li>Place the printer on a flat, stable surface near your computer or close to your Wi-Fi router for better wireless connectivity.</li>
+    <li>Connect the power cable securely and turn the printer on using the power button.</li>
+    <li>Wait until the printer completes its initial startup sequence, which may include internal checks or alignment processes.</li>
+  </ul>
+  <div style="font-size:15.5px; color:#222; line-height:1.75;">
+    <strong style="color:#2563eb;">Troubleshooting Tip:</strong><br>
+    If the printer does not power on, verify that the power cable is firmly connected and plugged directly into a wall outlet. Avoid using extension cords or surge protectors during the initial setup.
+  </div>
+</div>
+
+<!-- STEP 2 -->
+<div style="background:#ffffff; border-radius:16px; padding:30px 34px; margin-bottom:30px; box-shadow:0 10px 26px rgba(0,0,0,0.12); border-left:6px solid #2563eb;">
+  <h3 style="margin:0 0 18px 0; font-size:20px; color:#2563eb; font-weight:600;">
+    Step 2: Download the Latest Printer Software
+  </h3>
+  <ul style="margin:0 0 18px 0; padding-left:22px; line-height:1.85; font-size:15.5px; color:#222;">
+    <li>Open your web browser and navigate to the official printer support or driver download page.</li>
+    <li>Enter your printer model number carefully to locate the correct software for your device.</li>
+    <li>Select your operating system such as Windows, macOS, or Linux to ensure compatibility.</li>
+    <li>Download the most recent printer driver and setup utility to your computer.</li>
+    <li>Save the file to an easily accessible location, such as your desktop or downloads folder.</li>
+  </ul>
+  <div style="font-size:15.5px; color:#222; line-height:1.75;">
+    <strong style="color:#2563eb;">Troubleshooting Tip:</strong><br>
+    If the download fails or stops unexpectedly, check your internet connection and temporarily disable firewall or antivirus software that may be blocking the download.
+  </div>
+</div>
+
+<!-- STEP 3 -->
+<div style="background:#ffffff; border-radius:16px; padding:30px 34px; margin-bottom:30px; box-shadow:0 10px 26px rgba(0,0,0,0.12); border-left:6px solid #2563eb;">
+  <h3 style="margin:0 0 18px 0; font-size:20px; color:#2563eb; font-weight:600;">
+    Step 3: Connect Your Printer to the Device
+  </h3>
+
+  <p style="font-size:15.5px; font-weight:600; margin:0 0 10px 0; color:#222;">
+    Option A – USB Connection
+  </p>
+  <ul style="margin:0 0 18px 0; padding-left:22px; line-height:1.85; font-size:15.5px; color:#222;">
+    <li>Use a USB cable to connect the printer directly to your computer.</li>
+    <li>Ensure the cable is securely plugged into both the printer and the computer.</li>
+    <li>Wait while your operating system automatically detects the printer hardware.</li>
+  </ul>
+
+  <p style="font-size:15.5px; font-weight:600; margin:0 0 10px 0; color:#222;">
+    Option B – Wireless Connection
+  </p>
+  <ul style="margin:0; padding-left:22px; line-height:1.85; font-size:15.5px; color:#222;">
+    <li>Access the Wi-Fi or Network Setup option from the printer’s control panel.</li>
+    <li>Select your home or office wireless network from the available list.</li>
+    <li>Enter the Wi-Fi password carefully and confirm the connection.</li>
+    <li>Wait for the printer to indicate a successful network connection.</li>
+  </ul>
+</div>
+
+<!-- STEP 4 -->
+<div style="background:#ffffff; border-radius:16px; padding:30px 34px; margin-bottom:30px; box-shadow:0 10px 26px rgba(0,0,0,0.12); border-left:6px solid #2563eb;">
+  <h3 style="margin:0 0 18px 0; font-size:20px; color:#2563eb; font-weight:600;">
+    Step 4: Install and Configure Printer Drivers
+  </h3>
+  <ul style="margin:0 0 18px 0; padding-left:22px; line-height:1.85; font-size:15.5px; color:#222;">
+    <li>Double-click the downloaded setup file to begin the installation process.</li>
+    <li>Follow the on-screen instructions carefully and accept the license agreement.</li>
+    <li>Select your preferred connection method when prompted by the installer.</li>
+    <li>Allow the software to detect and configure the printer automatically.</li>
+    <li>Complete the installation and restart your system if required.</li>
+  </ul>
+  <div style="font-size:15.5px; color:#222; line-height:1.75;">
+    <strong style="color:#2563eb;">Troubleshooting Tip:</strong><br>
+    If the installer cannot find the printer, reconnect the cable, restart the printer, or temporarily disable background security software during installation.
+  </div>
+</div>
+
+<!-- STEP 5 -->
+<div style="background:#ffffff; border-radius:16px; padding:30px 34px; margin-bottom:30px; box-shadow:0 10px 26px rgba(0,0,0,0.12); border-left:6px solid #2563eb;">
+  <h3 style="margin:0 0 18px 0; font-size:20px; color:#2563eb; font-weight:600;">
+    Step 5: Print a Test Page
+  </h3>
+  <ul style="margin:0 0 18px 0; padding-left:22px; line-height:1.85; font-size:15.5px; color:#222;">
+    <li>Open your computer’s printer settings or control panel.</li>
+    <li>Select the newly installed printer from the list of available devices.</li>
+    <li>Click on the option to print a test page.</li>
+    <li>Verify that the page prints correctly without errors or alignment issues.</li>
+  </ul>
+  <div style="font-size:15.5px; color:#222; line-height:1.75;">
+    <strong style="color:#2563eb;">Troubleshooting Tip:</strong><br>
+    If the test page does not print, ensure the printer is online, loaded with paper, and that ink or toner cartridges are properly installed.
+  </div>
+</div>
+
+<!-- STEP 6 -->
+<div style="background:#ffffff; border-radius:16px; padding:30px 34px; margin-bottom:30px; box-shadow:0 10px 26px rgba(0,0,0,0.12); border-left:6px solid #2563eb;">
+  <h3 style="margin:0 0 18px 0; font-size:20px; color:#2563eb; font-weight:600;">
+    Step 6: Set Default Printer Preferences
+  </h3>
+  <ul style="margin:0; padding-left:22px; line-height:1.85; font-size:15.5px; color:#222;">
+    <li>Open the Printers &amp; Scanners section from your system settings.</li>
+    <li>Set the newly installed printer as your default printing device.</li>
+    <li>Adjust preferences such as paper size, print quality, color options, and orientation.</li>
+    <li>Save your settings to ensure consistent printing results in the future.</li>
+  </ul>
+</div>
+
+</div>
+
+
+
+   <!-- FONT (ADD ONCE IF NOT ADDED ALREADY) -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+.trouble-font{
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+</style>
+
+<div class="trouble-font" style="max-width:1200px; margin:35px auto;">
+
+  <!-- HEADING -->
+  <h2 style="margin:0 0 8px 0; font-size:28px; color:#ff1f2d; font-weight:700;">
+    Troubleshooting Guide — When Printer Setup Does Not Complete
+  </h2>
+
+  <p style="margin:0 0 26px 0; font-size:15px; color:#555; line-height:1.7;">
+    If your printer fails to install, connect, or respond during setup, follow the troubleshooting steps below carefully. These actions are designed to resolve the most common hardware, software, and connection issues encountered during printer installation.
+  </p>
+
+  <!-- STEP 1 -->
+  <div style="background:#fdf2f3; border-radius:14px; padding:24px 28px; margin-bottom:20px; box-shadow:0 6px 20px rgba(0,0,0,0.08); border-left:6px solid #2764ff;">
+    <h3 style="margin:0 0 12px 0; font-size:18px; color:#2764ff; font-weight:600;">
+      1. Restart and Reconnect All Devices
+    </h3>
+    <ul style="margin:0; padding-left:20px; font-size:14px; line-height:1.75; color:#444;">
+      <li>Disconnect the printer from your computer or wireless network.</li>
+      <li>Power off both the printer and the computer completely.</li>
+      <li>Wait at least 60 seconds to clear temporary memory.</li>
+      <li>Turn both devices back on and reconnect the printer.</li>
+      <li>Rerun the printer installation or setup utility.</li>
+    </ul>
+  </div>
+
+  <!-- STEP 2 -->
+  <div style="background:#fdf2f3; border-radius:14px; padding:24px 28px; margin-bottom:20px; box-shadow:0 6px 20px rgba(0,0,0,0.08); border-left:6px solid #2764ff;">
+    <h3 style="margin:0 0 12px 0; font-size:18px; color:#2764ff; font-weight:600;">
+      2. Verify USB Ports and Connection Cables
+    </h3>
+    <ul style="margin:0; padding-left:20px; font-size:14px; line-height:1.75; color:#444;">
+      <li>Unplug the USB cable and connect it to a different USB port on your computer.</li>
+      <li>Use a certified or original USB cable to avoid connection issues.</li>
+      <li>Avoid USB hubs, extension cables, or docking stations during setup.</li>
+      <li>If possible, test the cable with another device to confirm it is working.</li>
+    </ul>
+  </div>
+
+  <!-- STEP 3 -->
+  <div style="background:#fdf2f3; border-radius:14px; padding:24px 28px; margin-bottom:20px; box-shadow:0 6px 20px rgba(0,0,0,0.08); border-left:6px solid #2764ff;">
+    <h3 style="margin:0 0 12px 0; font-size:18px; color:#2764ff; font-weight:600;">
+      3. Perform a Full Power Reset
+    </h3>
+    <ul style="margin:0; padding-left:20px; font-size:14px; line-height:1.75; color:#444;">
+      <li>Turn off the printer using the power button.</li>
+      <li>Disconnect the power cable from the printer and the wall outlet.</li>
+      <li>Wait for at least <strong>60–90 seconds</strong> to discharge residual power.</li>
+      <li>Reconnect the printer directly to a wall outlet and turn it back on.</li>
+      <li>Retry the printer setup after the printer becomes ready.</li>
+    </ul>
+  </div>
+
+  <!-- STEP 4 -->
+  <div style="background:#fdf2f3; border-radius:14px; padding:24px 28px; margin-bottom:20px; box-shadow:0 6px 20px rgba(0,0,0,0.08); border-left:6px solid #2764ff;">
+    <h3 style="margin:0 0 12px 0; font-size:18px; color:#2764ff; font-weight:600;">
+      4. Remove Conflicting or Old Printer Drivers
+    </h3>
+    <ul style="margin:0; padding-left:20px; font-size:14px; line-height:1.75; color:#444;">
+      <li>Open <strong>Control Panel → Programs and Features</strong>.</li>
+      <li>Locate and uninstall any previously installed printer software or drivers.</li>
+      <li>Remove entries related to older printer models if present.</li>
+      <li>Restart your computer to apply the changes.</li>
+      <li>Install the latest printer software again.</li>
+    </ul>
+  </div>
+
+  <!-- STEP 5 -->
+  <div style="background:#fdf2f3; border-radius:14px; padding:24px 28px; margin-bottom:20px; box-shadow:0 6px 20px rgba(0,0,0,0.08); border-left:6px solid #2764ff;">
+    <h3 style="margin:0 0 12px 0; font-size:18px; color:#2764ff; font-weight:600;">
+      5. Clear Temporary Files and Cached Data
+    </h3>
+    <ul style="margin:0; padding-left:20px; font-size:14px; line-height:1.75; color:#444;">
+      <li>Open <strong>Disk Cleanup</strong> from the Windows search bar.</li>
+      <li>Select your system drive (usually C:).</li>
+      <li>Check temporary files, setup files, and system cache options.</li>
+      <li>Click <strong>OK</strong> to remove unnecessary files.</li>
+    </ul>
+  </div>
+
+  <!-- STEP 6 -->
+  <div style="background:#fdf2f3; border-radius:14px; padding:24px 28px; margin-bottom:20px; box-shadow:0 6px 20px rgba(0,0,0,0.08); border-left:6px solid #2764ff;">
+    <h3 style="margin:0 0 12px 0; font-size:18px; color:#2764ff; font-weight:600;">
+      6. Perform a Clean Boot (Windows Systems)
+    </h3>
+    <ul style="margin:0; padding-left:20px; font-size:14px; line-height:1.75; color:#444;">
+      <li>Press <strong>Win + R</strong>, type <strong>msconfig</strong>, and press Enter.</li>
+      <li>Under the General tab, select <strong>Selective Startup</strong>.</li>
+      <li>Uncheck <strong>Load startup items</strong>.</li>
+      <li>Go to the Services tab, check <strong>Hide all Microsoft services</strong>, then click <strong>Disable all</strong>.</li>
+      <li>Restart your system and retry the printer installation.</li>
+    </ul>
+  </div>
+
+  <!-- STEP 7 -->
+  <div style="background:#fdf2f3; border-radius:14px; padding:24px 28px; margin-bottom:30px; box-shadow:0 6px 20px rgba(0,0,0,0.08); border-left:6px solid #2764ff;">
+    <h3 style="margin:0 0 12px 0; font-size:18px; color:#2764ff; font-weight:600;">
+      7. Update Printer Drivers Using Device Manager
+    </h3>
+    <ul style="margin:0; padding-left:20px; font-size:14px; line-height:1.75; color:#444;">
+      <li>Open <strong>Device Manager</strong> from the Start menu.</li>
+      <li>Expand <strong>Printers</strong> or <strong>Universal Serial Bus controllers</strong>.</li>
+      <li>Right-click the printer device and select <strong>Update driver</strong>.</li>
+      <li>Choose <strong>Search automatically for updated driver software</strong>.</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+  <div class="help-font" style="
+  width:100%;
+  background:#f6f8fb;
+  padding:40px 0;
+">
+
+  <div style="
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 24px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+  ">
+
+
+   
+
+  </div>
+</div>
+
+
+
+
+
+<footer style="background:#0b1220;color:#fff;padding:50px 20px 20px;font-family:Poppins,Arial,sans-serif;">
+  
+  <div style="max-width:1200px;margin:auto;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;">
+    
+    <!-- Left -->
+    <div style="flex:1 1 260px;min-width:250px;">
+      <h2 style="color:#00c3ff;margin-bottom:15px;">Printjee</h2>
+      
+      <p style="color:#cbd5e1;line-height:1.6;margin-bottom:20px;">
+        In today’s competitive world, printed materials play a major role in building brand identity 
+        and creating a strong impression. We ensure that every print product reflects excellence, 
+        creativity, and reliability.
+      </p>
+
+      <p style="color:#00c3ff;margin-bottom:10px;">
+        📍 20503 Khole Springs Lane<br>
+        Cypress, TX 77433<br>
+        United States
+      </p>
+
+      <p style="color:#cbd5e1;">
+        ✉ info@printjee.com | 📞 +1-000-000-0000
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex:1 1 150px;min-width:150px;">
+      <h3 style="color:#00c3ff;margin-bottom:15px;">Quick Links</h3>
+      <p style="margin:8px 0;color:#cbd5e1;">Home</p>
+      <p style="margin:8px 0;color:#cbd5e1;">About</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Services</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Products</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Contact</p>
+      <p style="margin:8px 0;color:#cbd5e1;">FAQs</p>
+    </div>
+
+    <!-- Products -->
+    <div style="flex:1 1 180px;min-width:180px;">
+      <h3 style="color:#00c3ff;margin-bottom:15px;">Printjee</h3>
+      <p style="margin:8px 0;color:#cbd5e1;">Inkjet Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Laser Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">All-in-One Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Thermal Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Dot Matrix Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Photo Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">Label Printers</p>
+      <p style="margin:8px 0;color:#cbd5e1;">3D Printers</p>
+    </div>
+
+    <!-- Policy -->
+    <div style="flex:1 1 150px;min-width:150px;">
+      <h3 style="color:#00c3ff;margin-bottom:15px;">Our Policy</h3>
+      <p style="margin:8px 0;"><a href="/privacy-policies.html" style="color:#00c3ff;text-decoration:none;">Privacy Policy</a></p>
+      <p style="margin:8px 0;"><a href="/terms-and-conditions.html" style="color:#00c3ff;text-decoration:none;">Terms & Conditions</a></p>
+      <p style="margin:8px 0;"><a href="/refund-policies.html" style="color:#00c3ff;text-decoration:none;">Refund Policy</a></p>
+      <p style="margin:8px 0;"><a href="/disclaimer.html" style="color:#00c3ff;text-decoration:none;">Disclaimer</a></p>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div style="text-align:center;margin-top:40px;padding-top:15px;border-top:1px solid #1e293b;color:#94a3b8;">
+    © 2026 Printjee. All Rights Reserved.
+  </div>
+
+</footer>
+</body>
+</html>

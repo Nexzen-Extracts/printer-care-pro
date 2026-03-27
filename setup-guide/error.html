@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Printer Setup</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{overflow-x:hidden;font-family:sans-serif}
+
+/* MAIN BG */
+.wrapper{
+background:linear-gradient(135deg,#2f6ae2,#4a8cff);
+padding:50px 15px;
+}
+
+/* CARD */
+.card{
+max-width:950px;
+margin:auto;
+background:#fff;
+border-radius:18px;
+padding:30px;
+display:flex;
+align-items:center;
+gap:30px;
+box-shadow:0 20px 60px rgba(0,0,0,0.15);
+flex-wrap:wrap;
+}
+
+/* LEFT */
+.content{
+flex:1;
+min-width:260px;
+}
+
+.content h2{
+color:#d32f2f;
+margin-bottom:15px;
+font-size:24px;
+}
+
+.content ul{
+margin-bottom:20px;
+color:#444;
+line-height:1.6;
+padding-left:18px;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+background:linear-gradient(90deg,#1a73e8,#e91e63);
+color:#fff;
+padding:12px 25px;
+border-radius:8px;
+cursor:pointer;
+font-weight:600;
+margin-top:10px;
+}
+
+/* NOTE */
+.note{
+color:#d32f2f;
+margin-top:15px;
+font-size:14px;
+}
+
+/* IMAGE */
+.image{
+flex:1;
+min-width:250px;
+text-align:center;
+}
+
+.image img{
+width:100%;
+max-width:300px;
+object-fit:contain;
+cursor:pointer;
+}
+
+/* SUPPORT SECTION */
+.support{
+background:#f5f7fb;
+padding:20px 15px;
+text-align:center;
+border-top:3px solid #1a73e8;
+}
+
+.support p{
+font-size:15px;
+line-height:1.6;
+margin-bottom:8px;
+}
+
+.support span{
+color:#1a73e8;
+font-weight:600;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.card{
+flex-direction:column;
+text-align:center;
+}
+
+.content h2{
+font-size:20px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- MAIN SECTION -->
+<div class="wrapper">
+
+  <div class="card">
+
+    <!-- LEFT -->
+    <div class="content">
+      <h2>Fatal error occurred during the printer software updates.</h2>
+
+      <ul>
+        <li>Printer installation failed. Operation could not be completed (Error 0x00000490)</li>
+        <li>Print spooler service corrupted or stopped.</li>
+      </ul>
+
+      <div style="font-weight:700;margin-bottom:8px;">TO FIX THIS ERROR</div>
+
+      <div class="btn" onclick="openJivo()">START LIVE CHAT</div>
+
+      <div class="note">
+        Do not retry installation as it may damage the printer.
+      </div>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="image">
+      <img src="/setup-guide/image/ERROR1.png" onclick="openJivo()">
+    </div>
+
+  </div>
+
+</div>
+
+<!-- SUPPORT -->
+<div class="support">
+  <p>
+    Install Smart software and drivers on each device you want to print from.
+  </p>
+  <p>
+    Need help? 
+    <span onclick="openJivo()">Printer Support</span>
+  </p>
+</div>
+
+<script>
+function openJivo(){
+  if(window.jivo_api){
+    jivo_api.open();
+  } else {
+    alert("Chat loading...");
+  }
+}
+</script>
+
+</body>
+</html>
