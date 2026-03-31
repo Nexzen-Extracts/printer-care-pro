@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HP Printer Installation Error</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+}
+
+body::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:url("https://img.freepik.com/premium-photo/laser-printer-desk-against-blue-background_93675-158548.jpg") center/cover no-repeat;
+    z-index:-1;
+    transform:scale(1.08);
+    opacity:.9;
+}
+
+.container{
+    width:100%;
+    max-width:1200px;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(10px);
+    border-radius:18px;
+    box-shadow:0 20px 50px rgba(0,0,0,.15);
+    padding:45px;
+}
+
+.content-wrap{
+    display:flex;
+    flex-wrap:wrap;
+    gap:40px;
+    align-items:center;
+}
+
+.text-box{
+    flex:1 1 420px;
+}
+
+.text-box h2{
+    font-size:42px;
+    line-height:1.2;
+    font-weight:800;
+    color:#d00000;
+    margin-bottom:18px;
+}
+
+.text-box p{
+    font-size:18px;
+    line-height:1.8;
+    color:#333;
+    margin-bottom:18px;
+}
+
+.btn-chat{
+    display:inline-block;
+    margin-top:10px;
+    padding:15px 34px;
+    background:#2764ff;
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:10px;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(39,100,255,.25);
+}
+
+.btn-chat:hover{
+    background:#1f4fcb;
+    transform:translateY(-2px);
+}
+
+.image-box{
+    flex:1 1 520px;
+}
+
+.image-box a{
+    display:block;
+}
+
+.image-box img{
+    width:100%;
+    max-width:650px;
+    border-radius:14px;
+    box-shadow:0 12px 30px rgba(0,0,0,.18);
+    transition:.35s ease;
+    cursor:pointer;
+}
+
+.image-box img:hover{
+    transform:scale(1.02);
+}
+
+/* note below image */
+.note-bottom{
+    margin-top:25px;
+    background:#fff4d6;
+    border-left:5px solid #ffb300;
+    padding:16px 18px;
+    border-radius:8px;
+    font-size:16px;
+    color:#7a5600;
+    line-height:1.6;
+}
+
+@media(max-width:768px){
+    .text-box h2{
+        font-size:30px;
+    }
+    .text-box p{
+        font-size:16px;
+    }
+    .container{
+        padding:25px;
+    }
+}
+</style>
+
+<script src="//code.jivosite.com/widget/CXmX6RkZyD" async></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="content-wrap">
+
+        <div class="text-box">
+            <h2>Fatal Error During Installation</h2>
+
+            <p>
+                Printer driver installation failed due to a critical error
+                <b>“0x803c010b”</b> preventing setup completion.
+            </p>
+
+            <p>
+                Please contact HP Customer Support immediately for assistance.
+            </p>
+
+            <a href="#" class="btn-chat" onclick="jivo_api.open(); return false;">
+                Ask Expert
+            </a>
+        </div>
+
+        <!-- clickable image for direct call -->
+        <div class="image-box">
+            <a href="tel:18556185032">
+                <img src="/printer-setup/image/1-855-618-5032.jpg" alt="HP Error Support Number">
+            </a>
+        </div>
+
+    </div>
+
+    <!-- moved note below image -->
+    <div class="note-bottom">
+        <b>Note:</b> Do not retry the installation. It may damage the printer and void the product warranty.
+    </div>
+</div>
+
+</body>
+</html>

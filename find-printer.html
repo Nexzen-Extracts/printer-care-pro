@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Find Printer Driver</title>
-
+<script src="//code.jivosite.com/widget/CXmX6RkZyD" async></script>
 <link rel="icon" type="image/png" href="./fav.png">
 
 
@@ -172,112 +172,26 @@ button {
 </div>
 
 
-<!-- SEEDED CLEAN NOTICE -->
-<div id="noticeBox"
-  style="
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.35);
-    z-index:9999;
-    align-items:center;
-    justify-content:center;
-  "
->
-  <div
-    style="
-      background:#ffffff;
-      width:92%;
-      max-width:420px;
-      padding:26px 30px;
-      border-radius:10px;
-      box-shadow:0 18px 40px rgba(0,0,0,0.18);
-      font-family:Arial, Helvetica, sans-serif;
-      text-align:left;
-    "
-  >
-    <h3
-      style="
-        margin:0 0 10px;
-        font-size:20px;
-        font-weight:600;
-        color:#1f2937;
-      "
-    >
-      Printer Not Found
-    </h3>
-
-    <p id="noticeMsg"
-      style="
-        font-size:15px;
-        color:#4b5563;
-        line-height:1.6;
-        margin-bottom:22px;
-      "
-    >
-      <!-- JS se fill hoga -->
-    </p>
-
-    <div style="text-align:right;">
-      <button
-        onclick="closeNotice()"
-        style="
-          padding:10px 22px;
-          background:#0d6efd;
-          color:#ffffff;
-          border:none;
-          border-radius:6px;
-          font-size:14px;
-          cursor:pointer;
-        "
-        onmouseover="this.style.background='#0b5ed7'"
-        onmouseout="this.style.background='#0d6efd'"
-      >
-        OK
-      </button>
-    </div>
-  </div>
-</div>
 
 <!-- 
 INLINE JAVASCRIPT -->
-<!-- <script>
+<script>
 function redirectBrand() {
-  const input = document.getElementById("printerSearch");
-  const searchValue = input.value.toLowerCase().trim();
+  const input = document.getElementById("printerSearch").value.trim();
 
-  if (searchValue.includes("hp")) {
-    window.location.href = "/printer-setup/hp/install.html";
-  } 
-  else if (searchValue.includes("canon")) {
-    window.location.href = "/printer-setup/canon/install.html";
-  } 
-  else if (searchValue.includes("epson")) {
-    window.location.href = "/printer-setup/epson/install.html";
-  } 
-  else if (searchValue.includes("brother")) {
-    window.location.href = "/printer-setup/brother/install.html";
-  } 
-  else {
-    showNotice(input.value);
-  }
+  if (!input) return false;
+
+  const slug = input
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-");
+
+  // pehle actual install page open karo
+  window.location.href = "/printer-setup/hp/install.html?printer=" + encodeURIComponent(slug);
 
   return false;
 }
-
-function showNotice(userText) {
-  document.getElementById("noticeMsg").innerHTML =
-    "We couldn’t identify a supported printer brand for <b>“" +
-    userText +
-    "”</b>. <br><br>Please search using a supported brand name .";
-
-  document.getElementById("noticeBox").style.display = "flex";
-}
-
-function closeNotice() {
-  document.getElementById("noticeBox").style.display = "none";
-}
-</script> -->
+</script>
 
 
 
@@ -289,3 +203,8 @@ function closeNotice() {
 
 </body>
 </html>
+
+
+
+
+
